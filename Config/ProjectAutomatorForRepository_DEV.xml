@@ -2,38 +2,38 @@
 	<DeployerServer>
 		<host>localhost:5555</host>
 		<user>Administrator</user>
-		<pwd>{AES}Y5IgMqjfvkgbg7p5VUZztw==</pwd>
+		<pwd>manage</pwd>
 	</DeployerServer>
   <Environment>
 	  <MFT>
-			<mftalias name="RepoMFTTarget_Dev">
-				<host>10.219.140.113</host>
-				<port>52111</port>
-				<user>deployer</user>
-				<pwdHandle>deployer</pwdHandle>
+			<mftalias name="Dev_digital">
+				<host>10.225.140.23</host>
+				<port>52141</port>
+				<user>Administrator</user>
+				<pwd>GB_DEV@123</pwd>
 				<useSSL>true</useSSL>
-				<version>10.3</version>
+				<version>10.7</version>
 				<Test>true</Test>
 			</mftalias>
 		</MFT>
 		<Repository>
-			<repalias name="RepoSource_MK_RTL_CRM_INT003_001_CUSTOMERDETAILS_AIQ_MFT_Event_Only_DEV">
+			<repalias name="RepoSource_Payal_VFS_DEV">
 				<type>FlatFile</type>
-				<urlOrDirectory>D:\SAG_Composites_Deploy\DEV\MK_RTL_CRM_INT003_001_CUSTOMERDETAILS_AIQ_MFT_Event_Only</urlOrDirectory>
+				<urlOrDirectory>D:\SAG_Composites_Deploy\DEV\Payal_VFS</urlOrDirectory>
 				<Test>true</Test>
 			</repalias>
 		</Repository>	
 	</Environment>
 
 	<Projects projectPrefix="ESB_">
-		<Project description="MFT Event Only" ignoreMissingDependencies="true" name="MK_RTL_CRM_INT003_001_CUSTOMERDETAILS_AIQ_MFT_Event_Only_To_DEV" overwrite="true" type="Repository">
+		<Project description="MFT Event Only" ignoreMissingDependencies="true" name="Payal_VFS_To_DEV" overwrite="true" type="Repository">
 
-<DeploymentSet autoResolve="full" description="" name="myDeploymentSet" srcAlias="RepoSource_MK_RTL_CRM_INT003_001_CUSTOMERDETAILS_AIQ_MFT_Event_Only_DEV">
-<Composite displayName="ActiveTransfer_*" name="ActiveTransfer_*" srcAlias="RepoSource_MK_RTL_CRM_INT003_001_CUSTOMERDETAILS_AIQ_MFT_Event_Only_DEV" type="MFT"/>
+<DeploymentSet autoResolve="full" description="" name="myDeploymentSet" srcAlias="RepoSource_Payal_VFS_DEV">
+<Composite displayName="ActiveTransfer_*" name="ActiveTransfer_*" srcAlias="RepoSource_Payal_VFS_DEV" type="MFT"/>
 </DeploymentSet>
 <DeploymentMap description="" name="myDeploymentMap"/>
 <MapSetMapping mapName="myDeploymentMap" setName="myDeploymentSet">
-<alias type="MFT">RepoMFTTarget_Dev</alias>
+<alias type="MFT">Dev_digital</alias>
 </MapSetMapping>
 			<DeploymentCandidate description="" mapName="myDeploymentMap" name="myDeployment"/>
 		</Project>		
