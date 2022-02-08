@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><DeployerSpec exitOnError="true" sourceType="Repository">
+	<DeployerServer>
+		<host>mkdc1accusr01.kors.local:5555</host>
+		<user>Administrator</user>
+		<pwd>manage</pwd>
+	</DeployerServer>
+  <Environment>
+		<IS>
+			<isalias name="RepoISTarget_QA1">
+				<host>10.225.140.203</host>
+				<port>53111</port>
+				<user>deploy</user>
+				<pwd>deploy</pwd>
+				<useSSL>true</useSSL>
+				<version>10.7</version>
+				<installDeployerResource>false</installDeployerResource>
+				<Test>true</Test>
+			</isalias>
+			<isalias name="RepoISTarget_QA2">
+				<host>10.225.140.204</host>
+				<port>53121</port>
+				<user>deploy</user>
+				<pwd>deploy</pwd>
+				<useSSL>true</useSSL>
+				<version>10.7</version>
+				<installDeployerResource>false</installDeployerResource>
+				<Test>true</Test>
+			</isalias>
+		</IS>
+	  <MFT>
+			<mftalias name="RepoMFTTarget_QA1">
+				<host>10.225.140.203</host>
+				<port>53111</port>
+				<user>deploy</user>
+				<pwd>deploy</pwd>
+				<useSSL>true</useSSL>
+				<version>10.7</version>
+				<Test>true</Test>
+			</mftalias>
+			<mftalias name="RepoMFTTarget_QA2">
+				<host>10.225.140.204</host>
+				<port>53121</port>
+				<user>deploy</user>
+				<pwd>deploy</pwd>
+				<useSSL>true</useSSL>
+				<version>10.7</version>
+				<Test>true</Test>
+			</mftalias>
+		</MFT>
+		<Repository>
+			<repalias name="RepoSource_CPRI_FIN_INT159_PaymentAck_Sub_QA">
+				<type>FlatFile</type>
+				<urlOrDirectory>D:\SAG_Composites_Deploy\QA\CPRI_FIN_INT159_PaymentAck_Sub</urlOrDirectory>
+				<Test>true</Test>
+			</repalias>
+		</Repository>	
+	</Environment>
+
+	<Projects projectPrefix="ESB_">
+		<Project description="MFT Event Only" ignoreMissingDependencies="true" name="CPRI_FIN_INT159_PaymentAck_Sub_To_QA" overwrite="true" type="Repository">
+
+<DeploymentSet autoResolve="full" description="" name="myDeploymentSet" srcAlias="RepoSource_CPRI_FIN_INT159_PaymentAck_Sub_QA">
+<Composite displayName="CPRI_FIN_INT159_PaymentAck_Sub" name="CPRI_FIN_INT159_PaymentAck_Sub" srcAlias="RepoSource_CPRI_FIN_INT159_PaymentAck_Sub_QA" type="IS"/>
+<Composite displayName="ActiveTransfer_*" name="ActiveTransfer_*" srcAlias="RepoSource_CPRI_FIN_INT159_PaymentAck_Sub_QA" type="MFT"/>
+</DeploymentSet>
+<DeploymentMap description="" name="myDeploymentMap"/>
+<MapSetMapping mapName="myDeploymentMap" setName="myDeploymentSet">
+<alias type="IS">RepoISTarget_QA1</alias>
+<alias type="IS">RepoISTarget_QA2</alias>
+<alias type="MFT">RepoMFTTarget_QA1</alias>
+<alias type="MFT">RepoMFTTarget_QA2</alias>
+</MapSetMapping>
+			<DeploymentCandidate description="" mapName="myDeploymentMap" name="myDeployment"/>
+		</Project>		
+	</Projects>
+</DeployerSpec>
