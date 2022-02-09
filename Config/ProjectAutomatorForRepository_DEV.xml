@@ -28,7 +28,7 @@
 			</mftalias>
 		</MFT>
 		<Repository>
-			<repalias name="RepoSource_Payal_VFS_DEV">
+			<repalias name="RepoSource_Payal_IS_MFT_DEV">
 				<type>FlatFile</type>
 				<urlOrDirectory>D:\SAG_Composites_Deploy\DEV\Payal_IS_MFT</urlOrDirectory>
 				<Test>true</Test>
