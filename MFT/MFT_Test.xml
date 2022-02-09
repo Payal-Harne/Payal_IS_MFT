@@ -1,0 +1,171 @@
+<AssetData xmlns="http://namespaces.softwareag.com/webMethods/MFT_NS" version="10.7.0.0.405" timetamp="2022-02-09T12:57:25"><assetType xmlns="" name="VFS"><asset><data><virtualFileObject>
+    <connectionPoolSize>0</connectionPoolSize>
+    <customProxy>false</customProxy>
+    <enableVFSDecrypt>false</enableVFSDecrypt>
+    <enableVFSEncrypt>false</enableVFSEncrypt>
+    <encrypted>false</encrypted>
+    <enterprise>false</enterprise>
+    <forceCWD>false</forceCWD>
+    <HADownload>false</HADownload>
+    <HAUpload>false</HAUpload>
+    <parent>true</parent>
+    <passEncrypted>true</passEncrypted>
+    <passive>true</passive>
+    <password />
+    <privKeyFilePath />
+    <privPGPKeyLoc />
+    <privPGPKeyPswd />
+    <proxyAlias />
+    <proxyEnabled>true</proxyEnabled>
+    <publicPGPKeyLoc />
+    <sslKeyPassword />
+    <sslKeystorePassword />
+    <TNPartner>false</TNPartner>
+    <twoFactorAuth>false</twoFactorAuth>
+    <user />
+    <VFSName>Arpit_CICD_Target_VFS</VFSName>
+    <VFSType>VIRTUAL</VFSType>
+    <VFSURL>FILE://test/</VFSURL>
+    <VFSVirtual>false</VFSVirtual>
+    <vfsId>5e330m00frf83e4f00002vcu</vfsId>
+    <virtualParentPath />
+</virtualFileObject></data></asset><asset><data><virtualFileObject>
+    <connectionPoolSize>0</connectionPoolSize>
+    <customProxy>false</customProxy>
+    <enableVFSDecrypt>false</enableVFSDecrypt>
+    <enableVFSEncrypt>false</enableVFSEncrypt>
+    <encrypted>false</encrypted>
+    <enterprise>false</enterprise>
+    <forceCWD>false</forceCWD>
+    <HADownload>false</HADownload>
+    <HAUpload>false</HAUpload>
+    <parent>true</parent>
+    <passEncrypted>true</passEncrypted>
+    <passive>true</passive>
+    <password />
+    <privKeyFilePath />
+    <privPGPKeyLoc />
+    <privPGPKeyPswd />
+    <proxyAlias />
+    <proxyEnabled>true</proxyEnabled>
+    <publicPGPKeyLoc />
+    <sslKeyPassword />
+    <sslKeystorePassword />
+    <TNPartner>false</TNPartner>
+    <twoFactorAuth>false</twoFactorAuth>
+    <user />
+    <VFSName>Arpit_CICD_Source_VFS</VFSName>
+    <VFSType>VIRTUAL</VFSType>
+    <VFSURL>FILE://test/</VFSURL>
+    <VFSVirtual>false</VFSVirtual>
+    <vfsId>5e330m00frf7tckh00002vb7</vfsId>
+    <virtualParentPath />
+</virtualFileObject></data></asset></assetType><assetType xmlns="" name="scheduleAction"><asset><data><scheduledAction>
+    <active>false</active>
+    <advancedEventData>
+        <actionNameWhereParallelProcessingStarts> </actionNameWhereParallelProcessingStarts>
+        <maxNumberOfParallelProcessing>1</maxNumberOfParallelProcessing>
+        <processFilesInParallel>false</processFilesInParallel>
+    </advancedEventData>
+    <description />
+    <id>5e330m00frf7jipf00002v7f</id>
+    <name>Arpit_CICD_Test</name>
+    <properties>
+        <entry>
+            <key xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">maxNumberOfParallelProcessing</key>
+            <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">1</value>
+        </entry>
+        <entry>
+            <key xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">processFilesInParallel</key>
+            <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">false</value>
+        </entry>
+        <entry>
+            <key xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">actionNameWhereParallelProcessingStarts</key>
+            <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string"> </value>
+        </entry>
+    </properties>
+    <schedule>
+        <hours>0</hours>
+        <minutes>0</minutes>
+        <scheduleFrequency>scheduleTypes3Daily</scheduleFrequency>
+        <startDate>2022/02/09</startDate>
+        <startTime>12:34:14</startTime>
+        <timeZone>UTC</timeZone>
+        <type>complex</type>
+    </schedule>
+    <scheduleId>5e330m00frf7jipf00002v7f</scheduleId>
+    <findFileTask>
+        <actionId>5e330p00frf7ka3j000002g2</actionId>
+        <classVersionID>4</classVersionID>
+        <disabled>false</disabled>
+        <errorTask>false</errorTask>
+        <executeErrorTask>false</executeErrorTask>
+        <multiThreaded>false</multiThreaded>
+        <taskName>Find</taskName>
+        <checkStabilityInterval>0</checkStabilityInterval>
+        <checkStabilityOnce>true</checkStabilityOnce>
+        <checkStabilityTimeout>0</checkStabilityTimeout>
+        <delayTillNoChange>false</delayTillNoChange>
+        <depth>1</depth>
+        <excludeChangingFiles>false</excludeChangingFiles>
+        <extractFileNameFromUrl>true</extractFileNameFromUrl>
+        <fileUrl>/Arpit_CICD_Source_VFS/</fileUrl>
+        <filterPresent>false</filterPresent>
+        <findRetryInterval>0</findRetryInterval>
+        <findTimeOut>0</findTimeOut>
+        <ignoreFolders>false</ignoreFolders>
+        <interruptProcess>false</interruptProcess>
+        <lastModificationDays>0</lastModificationDays>
+        <lastModificationHours>0</lastModificationHours>
+        <lastModificationMinutes>0</lastModificationMinutes>
+        <lastModificationMode>OLDER</lastModificationMode>
+        <maxItemsLimit>0</maxItemsLimit>
+        <overridePartner>false</overridePartner>
+        <partnerId />
+        <proxyAlias />
+        <remoteFile>false</remoteFile>
+        <replaceServerVariable>true</replaceServerVariable>
+        <sortFiles>false</sortFiles>
+        <sslKeyPassword />
+        <sslKeystorePassword />
+        <sslKeystorePath />
+        <useActiveTransferHTTP>true</useActiveTransferHTTP>
+        <useCustomProxyEnabled>false</useCustomProxyEnabled>
+        <useProxyEnabled>true</useProxyEnabled>
+        <vfsReference>true</vfsReference>
+    </findFileTask>
+    <moveFileTask>
+        <actionId>5e330p00frf89gk5000002gj</actionId>
+        <classVersionID>4</classVersionID>
+        <disabled>false</disabled>
+        <errorTask>false</errorTask>
+        <executeErrorTask>false</executeErrorTask>
+        <multiThreaded>false</multiThreaded>
+        <sourceFilter />
+        <taskName>Move</taskName>
+        <ascii>false</ascii>
+        <asciiConvert>none</asciiConvert>
+        <createDirectory>false</createDirectory>
+        <destinationUrl>/Arpit_CICD_Target_VFS/</destinationUrl>
+        <failActionIfFileExists>false</failActionIfFileExists>
+        <giveUpAfter>60</giveUpAfter>
+        <moveRetryInterval>0</moveRetryInterval>
+        <moveUnique>false</moveUnique>
+        <overridePartner>false</overridePartner>
+        <partnerId />
+        <preserveFileDate>false</preserveFileDate>
+        <proxyAlias />
+        <remoteDestination>false</remoteDestination>
+        <retryFail>0</retryFail>
+        <retryFailTimes>0</retryFailTimes>
+        <retryFromPointOfInterruption>0</retryFromPointOfInterruption>
+        <retryWhenInterrupted>0</retryWhenInterrupted>
+        <simple>false</simple>
+        <siteCommandBeforeUpload />
+        <skipTransferIfFileExists>false</skipTransferIfFileExists>
+        <useCustomProxyEnabled>false</useCustomProxyEnabled>
+        <useProxyEnabled>true</useProxyEnabled>
+        <vfsReference>true</vfsReference>
+        <wait>2</wait>
+    </moveFileTask>
+</scheduledAction></data></asset></assetType></AssetData>
